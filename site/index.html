@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Technical writing portfolio: sample Orders API reference, OpenAPI contract and Docs-as-Code workflow."><title>Technical Writing Portfolio</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1220;--panel:#121e30;--line:#293b52;--text:#edf4fc;--muted:#a9bbd0;--accent:#80d5c2}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0,#1c3448,transparent 36%),var(--bg);color:var(--text);font:16px/1.65 system-ui,sans-serif}main{max-width:1080px;margin:auto;padding:64px 24px}h1{font-size:clamp(2.5rem,7vw,4.8rem);line-height:1.02;letter-spacing:-.05em;margin:14px 0}h2{margin-top:42px}p{color:var(--muted);max-width:800px}.eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.15em;font-size:.8rem;font-weight:700}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:24px 0}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}.card p{font-size:.94rem}.card a{color:var(--accent)}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}.hero{border-bottom:1px solid var(--line);padding-bottom:42px}.pill{display:inline-block;border:1px solid #41665f;border-radius:99px;padding:4px 10px;margin:5px 5px 0 0;color:var(--accent);font-size:.82rem}footer{margin-top:50px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+</style></head><body><main>
+<section class="hero"><div class="eyebrow">Docs-as-Code · API documentation</div><h1>Technical Writing<br>Portfolio</h1><p>A sample Orders API documentation set demonstrating contract-first authoring, developer onboarding, endpoint reference design, error handling, webhooks and documentation quality checks. The API is fictional and intended for portfolio demonstration.</p><span class="pill">OpenAPI 3.1</span><span class="pill">REST API</span><span class="pill">Developer docs</span><span class="pill">EN / RU</span></section>
+<h2>Interactive API reference</h2><p>Explore the structured API contract rendered with Redoc. The specification is maintained in this repository.</p>
+<redoc spec-url="./openapi/openapi.yaml"></redoc>
+<h2>Documentation set</h2><div class="grid">
+<div class="card"><h3>API reference</h3><p>Endpoint descriptions, parameters, response schemas and examples.</p><a href="./docs/api-reference.md">Read source ↗</a></div>
+<div class="card"><h3>Developer guide</h3><p>Authentication, first request, pagination and integration workflow.</p><a href="./docs/developer-guide.md">Read guide ↗</a></div>
+<div class="card"><h3>Error handling</h3><p>HTTP status codes and consistent error response guidance.</p><a href="./docs/error-handling.md">Read guidance ↗</a></div>
+<div class="card"><h3>Webhooks</h3><p>Event payloads, HMAC verification, retries and deduplication.</p><a href="./docs/webhooks.md">Read guide ↗</a></div>
+<div class="card"><h3>Documentation workflow</h3><p>Branching, review, validation and publishing process.</p><a href="./docs/documentation-workflow.md">Read workflow ↗</a></div>
+<div class="card"><h3>QA checklist</h3><p>Accuracy, examples, usability and localization checks.</p><a href="./docs/testing-api-documentation.md">Review checklist ↗</a></div>
+</div>
+<footer>Portfolio demonstration · <a href="https://github.com/ekatmoz88-alt/technical-writing-portfolio">Source repository</a></footer>
+</main><script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"></script></body></html>
