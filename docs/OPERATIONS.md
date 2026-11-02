@@ -1,23 +1,35 @@
-# Разработка и публикация
+# Разработка, проверки и публикация
 
-## Подготовка изменений
+## Быстрые ссылки
 
-Редактируйте Markdown и YAML в Git. Перед commit проверьте YAML-отступы, ссылки и согласованность API reference с `openapi/openapi.yaml`.
+- [Опубликованный сайт](https://ekatmoz88-alt.github.io/technical-writing-portfolio/)
+- [Репозиторий](https://github.com/ekatmoz88-alt/technical-writing-portfolio)
+- [GitHub Actions — все запуски](https://github.com/ekatmoz88-alt/technical-writing-portfolio/actions)
+- [GitHub Actions workflow](https://github.com/ekatmoz88-alt/technical-writing-portfolio/blob/main/.github/workflows/pages.yml)
+- [Документация проекта](README.md)
 
-## GitHub Actions / Pages
+## Локальная работа
 
-Публикация настроена в `.github/workflows/pages.yml`. Workflow запускается при push в `main` для путей, перечисленных в `on.push.paths`, а также вручную через `workflow_dispatch`. Изучите сам workflow, чтобы проверить фактический состав Pages artifact.
+Откройте репозиторий и следуйте инструкциям в README и workflow. Проверяйте относительные ссылки, корректность путей и согласованность примеров с исходными спецификациями.
+
+## Что проверить перед публикацией
+
+Проверьте YAML и согласованность endpoint/schema/example в OpenAPI и справочнике. Убедитесь, что webhook-раздел описывает подпись, retries и дедупликацию. Сверьте EN/RU материалы.
 
 ## Release checklist
 
-- [ ] OpenAPI YAML корректен.
-- [ ] Пути, параметры, схемы и примеры согласованы.
-- [ ] Описаны ошибки и сценарии повторных запросов.
-- [ ] Webhook-раздел объясняет проверку подписи и обработку повторов.
-- [ ] Внутренние ссылки работают.
-- [ ] GitHub Actions завершился успешно.
-- [ ] Опубликованный сайт открывается и содержит ожидаемые страницы.
+- [ ] Изменения соответствуют структуре и назначению проекта.
+- [ ] Внутренние и внешние ссылки проверены.
+- [ ] Примеры и спецификации согласованы.
+- [ ] Нет секретов, токенов или реальных персональных данных.
+- [ ] [GitHub Actions workflow](https://github.com/ekatmoz88-alt/technical-writing-portfolio/blob/main/.github/workflows/pages.yml) завершился успешно.
+- [ ] [Опубликованный сайт](https://ekatmoz88-alt.github.io/technical-writing-portfolio/) открывается и показывает ожидаемую версию.
 
 ## Диагностика
 
-Откройте Actions → последний запуск → первый упавший step. Проверьте trigger и paths-фильтры, затем воспроизведите ошибочную команду локально. Не публикуйте токены и реальные персональные данные.
+1. Откройте [GitHub Actions](https://github.com/ekatmoz88-alt/technical-writing-portfolio/actions) и выберите последний запуск.
+2. Найдите первый упавший step и прочитайте его лог.
+3. Проверьте trigger, branch и path-фильтры в workflow.
+4. Исправьте первопричину, повторите проверку и убедитесь, что Pages deployment завершился успешно.
+
+Не считайте публикацию успешной только по факту успешной сборки: проверьте deployment и сам сайт.
