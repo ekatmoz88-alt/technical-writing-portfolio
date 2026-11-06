@@ -1,3 +1,5 @@
+[**Открыть опубликованный сайт →**](https://ekatmoz88-alt.github.io/technical-writing-portfolio/)
+
 [English](README.md) | **Русский**
 
 # Портфолио технического писателя
