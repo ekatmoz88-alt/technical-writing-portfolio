@@ -54,4 +54,4 @@ The Orders API is illustrative and simulated. It is a portfolio exercise demonst
 
 **Kate Motsar** — Technical Writer | API Documentation | Developer Docs
 
-[GitHub profile](https://github.com/ekatmoz88-alt) · [LinkedIn](https://www.linkedin.com/in/kate-motsar-b56974267/)
+[GitHub profile](https://github.com/ekatmoz88-alt) · [LinkedIn](https://www.linkedin.com/in/ekatmoz88/)
