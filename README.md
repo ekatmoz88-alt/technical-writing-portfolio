@@ -60,3 +60,8 @@ The Orders API is illustrative and simulated. It is a portfolio exercise demonst
 ## Tags
 
 `api-documentation` · `openapi-3-1` · `webhooks` · `developer-docs` · `docs-as-code` · `en-ru`
+
+
+## Relationship to the API Documentation Portfolio V2
+
+This repository is a separate, simulated Orders API documentation exercise. It is not the same service as the Supabase Edge Function demo in [API Documentation Portfolio V2](https://github.com/ekatmoz88-alt/api-docs-portfolio-v2). The V2 repository contains the deployed portfolio API and additional legacy SOAP/WSDL case studies.
