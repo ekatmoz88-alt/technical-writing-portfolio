@@ -62,3 +62,8 @@ Orders API — демонстрационный, вымышленный API. П�
 ## Теги
 
 `api-documentation` · `openapi-3-1` · `webhooks` · `developer-docs` · `docs-as-code` · `en-ru`
+
+
+## Связь с API Documentation Portfolio V2
+
+Этот репозиторий — отдельный демонстрационный пример документации вымышленного Orders API. Это не тот же сервис, что Supabase Edge Function в [API Documentation Portfolio V2](https://github.com/ekatmoz88-alt/api-docs-portfolio-v2). В V2 размещены развёрнутый демонстрационный API и дополнительные кейсы legacy SOAP/WSDL.
