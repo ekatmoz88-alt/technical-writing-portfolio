@@ -57,3 +57,8 @@ Orders API — демонстрационный, вымышленный API. П�
 ## Автор
 
 **Kate Motsar** — Technical Writer | API Documentation | Developer Docs
+
+
+## Теги
+
+`api-documentation` · `openapi-3-1` · `webhooks` · `developer-docs` · `docs-as-code` · `en-ru`
