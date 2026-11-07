@@ -55,3 +55,8 @@ The Orders API is illustrative and simulated. It is a portfolio exercise demonst
 **Kate Motsar** — Technical Writer | API Documentation | Developer Docs
 
 [GitHub profile](https://github.com/ekatmoz88-alt) · [LinkedIn](https://www.linkedin.com/in/ekatmoz88/)
+
+
+## Tags
+
+`api-documentation` · `openapi-3-1` · `webhooks` · `developer-docs` · `docs-as-code` · `en-ru`
