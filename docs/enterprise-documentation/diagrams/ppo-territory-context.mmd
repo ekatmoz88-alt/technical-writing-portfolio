@@ -1,0 +1,24 @@
+C4Context
+    title PPO Territory — System Context (historical integration landscape)
+
+    Person(operator, "PPO Territory operator", "Uses the application from a connected workstation")
+    System_Boundary(territory, "PPO Territory") {
+        System(ppo, "PPO Territory", "Enterprise information system for passport and migration-related workflows")
+    }
+
+    System_Ext(cbd, "ЦБД УИГ", "Visa, expulsion and deportation-related information")
+    System_Ext(elections, "ПРИУР ГАС «Выборы»", "Data export and reporting form 1.1 РИУР")
+    System_Ext(mvd, "ГИАЦ ГУ МВД", "Responses and administrative-offence information")
+    System_Ext(stat, "Росстат", "Statistical reporting forms 12-П and 12-В")
+    System_Ext(registry, "ЗАГС", "Birth and death record exchange")
+    System_Ext(passport, "АС «Российский паспорт»", "Export path normalization")
+    System_Ext(concentrator, "СПО «Сервисный концентратор»", "Integration direction involving СМЭВ, ЕПГУ, ФНС and ДКС МИД")
+
+    Rel(operator, ppo, "Uses")
+    Rel(ppo, cbd, "Exchange direction documented")
+    Rel(ppo, elections, "Export direction documented")
+    Rel(mvd, ppo, "Response data loading described")
+    Rel(stat, ppo, "Reporting data exchange described")
+    Rel(registry, ppo, "Record loading described")
+    Rel(ppo, passport, "Export path handling described")
+    Rel(ppo, concentrator, "Integration direction identified")
