@@ -38,6 +38,29 @@ mermaid.initialize({startOnLoad:true,theme:"neutral",securityLevel:"strict",flow
 <main class="wrap">
 <div class="notice"><strong>Важно:</strong> Orders API — демонстрационный проект портфолио. BPMN-процесс АС ФБ и ДРОНД реконструирован по тексту ДОА 2011 года, а не восстановлен из оригинальной диаграммы или работающей системы. Диаграммы PPO Territory / ARM Descriptor / Deshifrator доступны в отдельном каталоге и не объединяются в общую runtime-систему.</div>
 <div class="grid">
+<section class="card" id="ppo-c4"><div class="eyebrow">01 · C4 Context</div><h2>PPO Territory — integration landscape</h2><p class="desc">System context view based on seven external exchange directions listed in the PPO Territory archive. It does not assert current endpoints or protocol details.</p><div class="diagram mermaid">
+C4Context
+title PPO Territory — System Context (historical integration landscape)
+Person(operator, "PPO Territory operator", "Uses the application from a connected workstation")
+System_Boundary(territory, "PPO Territory") {
+ System(ppo, "PPO Territory", "Enterprise information system for passport and migration-related workflows")
+}
+System_Ext(cbd, "ЦБД УИГ", "Visa, expulsion and deportation-related information")
+System_Ext(elections, "ПРИУР ГАС «Выборы»", "Data export and reporting form 1.1 РИУР")
+System_Ext(mvd, "ГИАЦ ГУ МВД", "Responses and administrative-offence information")
+System_Ext(stat, "Росстат", "Statistical reporting forms 12-П and 12-В")
+System_Ext(registry, "ЗАГС", "Birth and death record exchange")
+System_Ext(passport, "АС «Российский паспорт»", "Export path normalization")
+System_Ext(concentrator, "СПО «Сервисный концентратор»", "Integration direction involving СМЭВ, ЕПГУ, ФНС and ДКС МИД")
+Rel(operator, ppo, "Uses")
+Rel(ppo, cbd, "Exchange direction documented")
+Rel(ppo, elections, "Export direction documented")
+Rel(mvd, ppo, "Response data loading described")
+Rel(stat, ppo, "Reporting data exchange described")
+Rel(registry, ppo, "Record loading described")
+Rel(ppo, passport, "Export path handling described")
+Rel(ppo, concentrator, "Integration direction identified")
+</div><div class="links"><a href="../../docs/enterprise-documentation/diagrams/ppo-territory-context.mmd">Mermaid source ↗</a><a href="https://github.com/ekatmoz88-alt/ppo-territory-archive/blob/main/docs/04-external-integrations.md">Integration evidence ↗</a></div></section>
 <section class="card" id="c4"><div class="eyebrow">01 · C4 Container</div><h2>Orders API — container view</h2><p class="desc">C4 representation of the documented demo API boundary, Supabase Edge Function and PostgreSQL store.</p><div class="diagram mermaid">
 C4Container
 title Orders API — C4 Container View (Portfolio Demo)
