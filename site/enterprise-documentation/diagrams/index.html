@@ -38,7 +38,7 @@ mermaid.initialize({startOnLoad:true,theme:"neutral",securityLevel:"strict",flow
 <main class="wrap">
 <div class="notice"><strong>Важно:</strong> Orders API — демонстрационный проект портфолио. BPMN-процесс АС ФБ и ДРОНД реконструирован по тексту ДОА 2011 года, а не восстановлен из оригинальной диаграммы или работающей системы. Диаграммы PPO Territory / ARM Descriptor / Deshifrator доступны в отдельном каталоге и не объединяются в общую runtime-систему.</div>
 <div class="grid">
-<section class="card"><div class="eyebrow">01 · C4 Container</div><h2>Orders API — container view</h2><p class="desc">C4 representation of the documented demo API boundary, Supabase Edge Function and PostgreSQL store.</p><div class="diagram mermaid">
+<section class="card" id="c4"><div class="eyebrow">01 · C4 Container</div><h2>Orders API — container view</h2><p class="desc">C4 representation of the documented demo API boundary, Supabase Edge Function and PostgreSQL store.</p><div class="diagram mermaid">
 C4Container
 title Orders API — C4 Container View (Portfolio Demo)
 Person(user, "Authenticated user", "Creates and retrieves their own orders")
@@ -51,7 +51,7 @@ Rel(user, api, "HTTPS / JSON", "apikey + Bearer token")
 Rel(api, auth, "Validate access token", "Auth")
 Rel(api, db, "Read and write orders", "SQL / database client")
 </div><div class="links"><a href="../../../docs/enterprise-documentation/diagrams/orders-api-c4-container.mmd">Mermaid source ↗</a><a href="https://github.com/ekatmoz88-alt/api-docs-portfolio-v2/blob/main/openapi/openapi.yaml">OpenAPI contract ↗</a></div></section>
-<section class="card"><div class="eyebrow">02 · UML Sequence</div><h2>Authenticated API request</h2><p class="desc">Conceptual request sequence based on the published authentication scheme and Orders API contract.</p><div class="diagram mermaid">
+<section class="card" id="sequence"><div class="eyebrow">02 · UML Sequence</div><h2>Authenticated API request</h2><p class="desc">Conceptual request sequence based on the published authentication scheme and Orders API contract.</p><div class="diagram mermaid">
 sequenceDiagram
  autonumber
  actor User as API Client
@@ -66,7 +66,7 @@ sequenceDiagram
  DB-->>Edge: Created order
  Edge-->>User: 201 Created + JSON
 </div><div class="links"><a href="../../../docs/enterprise-documentation/diagrams/orders-api-sequence.mmd">Mermaid source ↗</a><a href="https://github.com/ekatmoz88-alt/api-docs-portfolio-v2/blob/main/README.ru.md">Project description ↗</a></div></section>
-<section class="card"><div class="eyebrow">03 · BPMN 2.0</div><h2>АС ФБ и ДРОНД — budget planning</h2><p class="desc">Reconstructed process with review/approval gateways, based on Section 7 of the 2011 automation-object description.</p><div id="bpmn-canvas" class="bpmn-canvas"></div><div id="bpmn-status" class="status">Загрузка BPMN 2.0 модели…</div><div class="links"><a href="../../../docs/enterprise-documentation/diagrams/as-fb-drond-budget-planning.bpmn">BPMN 2.0 XML ↗</a><a href="../../../docs/enterprise-documentation/diagrams/as-fb-drond-budget-planning.mmd">Process overview ↗</a></div></section>
+<section class="card" id="bpmn"><div class="eyebrow">03 · BPMN 2.0</div><h2>АС ФБ и ДРОНД — budget planning</h2><p class="desc">Reconstructed process with review and approval activities, based on Section 7 of the 2011 automation-object description.</p><div id="bpmn-canvas" class="bpmn-canvas"></div><div id="bpmn-status" class="status">Загрузка BPMN 2.0 модели…</div><div class="links"><a href="../../../docs/enterprise-documentation/diagrams/as-fb-drond-budget-planning.bpmn">BPMN 2.0 XML ↗</a><a href="../../../docs/enterprise-documentation/diagrams/as-fb-drond-budget-planning.mmd">Process overview ↗</a></div></section>
 <section class="card"><div class="eyebrow">04 · Existing architecture catalogue</div><h2>System architecture and components</h2><p class="desc">The existing portfolio includes 10 primary Mermaid architecture diagrams and 7 additional component maps, with documented/derived/unverified distinctions.</p><div class="links"><a href="https://ekatmoz88-alt.github.io/territory-descriptor-unified/materials/architecture/architecture.html">Interactive architecture catalogue ↗</a><a href="https://github.com/ekatmoz88-alt/territory-descriptor-unified/blob/main/materials/architecture/component-maps.md">7 detailed component maps ↗</a><a href="https://github.com/ekatmoz88-alt/territory-docs/tree/main/database">Oracle data models and ER views ↗</a><a href="https://github.com/ekatmoz88-alt/cobalt-ui-navigation-docs/blob/main/diagrams/architecture.mmd">C++ component diagram ↗</a></div></section>
 </div>
 </main>
