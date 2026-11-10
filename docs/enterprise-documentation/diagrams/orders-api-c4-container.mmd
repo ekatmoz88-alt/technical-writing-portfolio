@@ -1,0 +1,14 @@
+C4Container
+    title Orders API — C4 Container View (Portfolio Demo)
+
+    Person(user, "Authenticated user", "Creates and retrieves their own orders")
+    System_Ext(auth, "Supabase Auth", "Issues and validates access tokens")
+
+    System_Boundary(orders, "Orders API Demo") {
+        Container(api, "Orders API", "Supabase Edge Function", "Authenticates requests and handles order operations")
+        ContainerDb(db, "PostgreSQL", "Supabase PostgreSQL", "Stores orders; Row Level Security enforces ownership")
+    }
+
+    Rel(user, api, "HTTPS / JSON", "apikey + Bearer token")
+    Rel(api, auth, "Validate access token", "Auth")
+    Rel(api, db, "Read and write orders", "SQL / database client")
