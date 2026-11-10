@@ -74,3 +74,15 @@ A separate conceptual case study documents an Enterprise Insurance System using 
 - [Enterprise Insurance System — Architecture Case Study](case-studies/enterprise-insurance-system/README.md)
 
 The case study labels unverified technology and relationship assumptions explicitly; it is not presented as a production-system reverse engineering result.
+
+
+## Enterprise / Backend / Integration-heavy documentation
+
+A consolidated map of the portfolio evidence for system architecture, backend and data models, API contracts, integrations and technical diagrams:
+
+- [Enterprise Documentation — portfolio map](./docs/enterprise-documentation/README.md)
+- [Interactive overview](./site/enterprise-documentation/index.html)
+- [C4 / UML Sequence / BPMN 2.0 module](./site/enterprise-documentation/diagrams/index.html)
+- [Diagram source index](./docs/enterprise-documentation/diagrams/README.md)
+
+The map links separate project repositories without merging their system boundaries or presenting demo models as production architecture.
