@@ -1,6 +1,6 @@
 # Enterprise Documentation — evidence-based capability map
 
-[Open interactive overview](../../site/enterprise-documentation/index.html) · [Diagram module](../../site/enterprise-documentation/diagrams/index.html) · [Русская версия](./README.ru.md)
+[Open interactive overview](https://ekatmoz88-alt.github.io/technical-writing-portfolio/enterprise-documentation/) · [Diagram module](https://ekatmoz88-alt.github.io/technical-writing-portfolio/enterprise-documentation/diagrams/) · [Русская версия](./README.ru.md)
 
 ## Purpose
 
@@ -27,11 +27,16 @@ This page consolidates public portfolio evidence for documenting complex enterpr
 4. **Deshifrator / ARM Descriptor** — legacy application architecture, source-based component analysis, file exchange, workstation boundaries and technical requirements.
 5. **AS FB and DROND** — separate business-process case based on the 2011 automation-object description: budget planning, imports/exports, approvals, RRO and OBAS.
 
+## AS FB and DROND case study
+
+[Business-process case study](./case-studies/as-fb-drond.md) — a separate description of the domain, source systems, proposal / RRO / OBAS sequence and evidence boundaries.
+
 ## Diagram module
 
 [Open the interactive diagram module](../../site/enterprise-documentation/diagrams/index.html).
 
 It includes:
+- A C4 Context view for the PPO Territory integration landscape.
 - A C4 Container view for the Orders API portfolio demo.
 - A UML Sequence Diagram for an authenticated API request.
 - A BPMN 2.0 process model for budget planning based on the AS FB and DROND 2011 source.
