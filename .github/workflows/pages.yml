@@ -29,6 +29,7 @@ jobs:
         run: |
           mkdir -p _site/docs _site/openapi
           cp site/index.html _site/index.html
+          cp -R site/enterprise-documentation _site/enterprise-documentation
           cp -R docs/. _site/docs/
           cp -R openapi/. _site/openapi/
       - uses: actions/upload-pages-artifact@v5
