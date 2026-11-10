@@ -1,0 +1,16 @@
+sequenceDiagram
+    autonumber
+    actor User as API Client
+    participant Edge as Orders API<br/>Supabase Edge Function
+    participant Auth as Supabase Auth
+    participant DB as PostgreSQL<br/>Row Level Security
+
+    User->>Edge: POST /orders<br/>apikey + Bearer access token
+    Edge->>Auth: Validate access token
+    Auth-->>Edge: Authenticated user identity
+    Edge->>DB: INSERT order for authenticated user
+    Note over DB: Row Level Security checks ownership policy
+    DB-->>Edge: Created order
+    Edge-->>User: 201 Created + JSON response
+
+    Note over User,DB: Conceptual sequence derived from the published API contract and project description.
