@@ -1,6 +1,6 @@
 # Enterprise Documentation — карта подтверждённых артефактов
 
-[Открыть интерактивный обзор](../../site/enterprise-documentation/index.html) · [Модуль диаграмм](../../site/enterprise-documentation/diagrams/index.html) · [English](./README.md)
+[Открыть интерактивный обзор](https://ekatmoz88-alt.github.io/technical-writing-portfolio/enterprise-documentation/) · [Модуль диаграмм](https://ekatmoz88-alt.github.io/technical-writing-portfolio/enterprise-documentation/diagrams/) · [English](./README.md)
 
 ## Цель
 
@@ -27,11 +27,16 @@
 4. **Deshifrator / ARM Descriptor** — примеры legacy application architecture, source-based component analysis, file exchange, workstation boundaries and technical requirements.
 5. **АС ФБ и ДРОНД** — отдельный бизнес-процессный кейс на основе ДОА 2011 года: бюджетное планирование, импорты/экспорты, согласования, РРО и ОБАС.
 
+## Кейс АС ФБ и ДРОНД
+
+[Бизнес-процессный кейс](./case-studies/as-fb-drond.md) — отдельное описание предметной области, источников, последовательности предложений / РРО / ОБАС и границ доказательности.
+
 ## Диаграммный модуль
 
 [Открыть интерактивный модуль](../../site/enterprise-documentation/diagrams/index.html).
 
 В нём собраны:
+- C4 Context для интеграционного ландшафта ППО «Территория».
 - C4 Container view для демонстрационного Orders API.
 - UML Sequence Diagram для аутентифицированного API-вызова.
 - BPMN 2.0 process model для процесса формирования бюджета по ДОА АС ФБ и ДРОНД.
