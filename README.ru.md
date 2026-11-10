@@ -67,3 +67,15 @@ Orders API — демонстрационный, вымышленный API. П�
 ## Связь с API Documentation Portfolio V2
 
 Этот репозиторий — отдельный демонстрационный пример документации вымышленного Orders API. Это не тот же сервис, что Supabase Edge Function в [API Documentation Portfolio V2](https://github.com/ekatmoz88-alt/api-docs-portfolio-v2). В V2 размещены развёрнутый демонстрационный API и дополнительные кейсы legacy SOAP/WSDL.
+
+
+## Enterprise / Backend / Integration-heavy documentation
+
+Сводная карта подтверждённых материалов по архитектуре систем, backend и data-моделям, API-контрактам, интеграциям и техническим диаграммам:
+
+- [Enterprise Documentation — обзор портфолио](./docs/enterprise-documentation/README.ru.md)
+- [Интерактивная страница](./site/enterprise-documentation/index.html)
+- [Модуль C4 / UML Sequence / BPMN 2.0](./site/enterprise-documentation/diagrams/index.html)
+- [Исходники диаграмм](./docs/enterprise-documentation/diagrams/README.md)
+
+Карта объединяет ссылки на отдельные репозитории; она не смешивает их системы и не выдаёт демонстрационные модели за production-архитектуру.
