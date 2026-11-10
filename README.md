@@ -65,3 +65,12 @@ The Orders API is illustrative and simulated. It is a portfolio exercise demonst
 ## Relationship to the API Documentation Portfolio V2
 
 This repository is a separate, simulated Orders API documentation exercise. It is not the same service as the Supabase Edge Function demo in [API Documentation Portfolio V2](https://github.com/ekatmoz88-alt/api-docs-portfolio-v2). The V2 repository contains the deployed portfolio API and additional legacy SOAP/WSDL case studies.
+
+
+## Additional architecture case study
+
+A separate conceptual case study documents an Enterprise Insurance System using a GitHub-renderable C4-inspired container view and an ERD of CDB/APPLN entities.
+
+- [Enterprise Insurance System — Architecture Case Study](case-studies/enterprise-insurance-system/README.md)
+
+The case study labels unverified technology and relationship assumptions explicitly; it is not presented as a production-system reverse engineering result.
