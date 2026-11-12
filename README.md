@@ -76,6 +76,11 @@ A separate conceptual case study documents an Enterprise Insurance System using 
 The case study labels unverified technology and relationship assumptions explicitly; it is not presented as a production-system reverse engineering result.
 
 
+## Additional architecture case studies
+
+- [SOIS — Spacecraft Onboard Interface Services (RU)](case-studies/sois/README.ru.md) — architecture layers, onboard interface services, subnetwork services, QoS classes, CDAS and TAS. This is a conceptual standards analysis, not an as-built spacecraft system.
+
+
 ## Enterprise / Backend / Integration-heavy documentation
 
 A consolidated map of the portfolio evidence for system architecture, backend and data models, API contracts, integrations and technical diagrams:
