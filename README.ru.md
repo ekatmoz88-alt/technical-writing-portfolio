@@ -69,6 +69,11 @@ Orders API — демонстрационный, вымышленный API. П�
 Этот репозиторий — отдельный демонстрационный пример документации вымышленного Orders API. Это не тот же сервис, что Supabase Edge Function в [API Documentation Portfolio V2](https://github.com/ekatmoz88-alt/api-docs-portfolio-v2). В V2 размещены развёрнутый демонстрационный API и дополнительные кейсы legacy SOAP/WSDL.
 
 
+## Дополнительные архитектурные кейсы
+
+- [SOIS — концепция и архитектура служб бортовых интерфейсов](case-studies/sois/README.ru.md) — уровни архитектуры, службы Application Support и Subnetwork, классы QoS, CDAS и TAS. Концептуальный анализ стандарта, не описание реализованной бортовой системы.
+
+
 ## Enterprise / Backend / Integration-heavy documentation
 
 Сводная карта подтверждённых материалов по архитектуре систем, backend и data-моделям, API-контрактам, интеграциям и техническим диаграммам:
