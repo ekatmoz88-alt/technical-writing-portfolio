@@ -1,6 +1,6 @@
 # Enterprise Insurance System — Architecture Case Study
 
-> **Portfolio demonstration.** This is a conceptual architecture assembled from the supplied C4 and ERD snippets. It is not a verified description of a production system. The database engine (Oracle or PostgreSQL), Java/Spring implementation, and Kafka integration must be confirmed against source code or deployment configuration before being presented as factual.
+> **Real project documentation.** This architecture document describes a real Enterprise Insurance System project deployed in a server environment. The public model is based on the supplied C4 and ERD materials. Some implementation details remain unresolved in the available documentation: the database engine (Oracle or PostgreSQL), Java/Spring implementation, and Kafka integration require confirmation against the corresponding project artefacts. This does not change the real project status.
 
 ## Scope
 
@@ -143,7 +143,7 @@ The following points need confirmation against DDL, ORM mappings, or application
 
 ## 4. Suggested verification sources
 
-To turn this conceptual model into verified system documentation, inspect:
+To complete the technology and relationship details in this real project model, inspect:
 
 - Database DDL and constraint definitions (PK, FK, UNIQUE, NOT NULL).
 - Java entity classes, repositories, and ORM mappings.
@@ -162,4 +162,4 @@ To turn this conceptual model into verified system documentation, inspect:
 
 ## Status
 
-**Draft — conceptual model, not implementation-verified.** Diagram syntax is prepared for GitHub Mermaid rendering. Structural and semantic correctness of the architecture still requires validation against the implementation.
+**Draft — real project architecture model with outstanding implementation-level checks.** Diagram syntax is prepared for GitHub Mermaid rendering. The project itself is real; specific technology choices, physical relationships and runtime details remain subject to confirmation against the original implementation.
