@@ -8,7 +8,7 @@
 
 ## Overview
 
-A portfolio project documenting a fictional Orders API. It demonstrates how to design developer-focused API documentation, from the OpenAPI contract to onboarding guides, error references, and webhook instructions.
+Documentation for the real Orders API project. It covers the OpenAPI contract, developer onboarding, endpoint references, error handling, and webhook workflows.
 
 ## What this project demonstrates
 
@@ -48,7 +48,7 @@ OpenAPI 3.1 · YAML · Markdown · Git · Postman/cURL · API documentation work
 
 ## Project context
 
-The Orders API is illustrative and simulated. It is a portfolio exercise demonstrating documentation structure and artifacts, not a live production service.
+The Orders API is a real deployed service. This repository documents its API contract and integration workflows. Public examples use controlled test data; no customer credentials or private records are published.
 
 ## Author
 
@@ -64,7 +64,7 @@ The Orders API is illustrative and simulated. It is a portfolio exercise demonst
 
 ## Relationship to the API Documentation Portfolio V2
 
-This repository is a separate, simulated Orders API documentation exercise. It is not the same service as the Supabase Edge Function demo in [API Documentation Portfolio V2](https://github.com/ekatmoz88-alt/api-docs-portfolio-v2). The V2 repository contains the deployed portfolio API and additional legacy SOAP/WSDL case studies.
+This repository and [API Documentation Portfolio V2](https://github.com/ekatmoz88-alt/api-docs-portfolio-v2) contain related Orders API documentation and implementation materials from the same real project. V2 contains the deployed Supabase Edge Function, API reference, and additional legacy SOAP/WSDL documentation.
 
 
 ## Additional architecture case study
