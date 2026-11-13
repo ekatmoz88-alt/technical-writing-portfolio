@@ -69,7 +69,7 @@ This repository and [API Documentation Portfolio V2](https://github.com/ekatmoz8
 
 ## Additional architecture case study
 
-A separate conceptual case study documents an Enterprise Insurance System using a GitHub-renderable C4-inspired container view and an ERD of CDB/APPLN entities.
+A separate real-project architecture document covers an Enterprise Insurance System using a GitHub-renderable C4-inspired container view and an ERD of CDB/APPLN entities.
 
 - [Enterprise Insurance System — Architecture Case Study](case-studies/enterprise-insurance-system/README.md)
 
@@ -90,4 +90,4 @@ A consolidated map of the portfolio evidence for system architecture, backend an
 - [C4 / UML Sequence / BPMN 2.0 module](./site/enterprise-documentation/diagrams/index.html)
 - [Diagram source index](./docs/enterprise-documentation/diagrams/README.md)
 
-The map links separate project repositories without merging their system boundaries or presenting demo models as production architecture.
+The map links separate real project repositories without merging their system boundaries or presenting draft architecture models as fully verified physical deployment topologies.
