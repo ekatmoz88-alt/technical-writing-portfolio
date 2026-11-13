@@ -71,7 +71,7 @@ Orders API — реальный развёрнутый сервис. Репоз�
 
 ## Дополнительные архитектурные кейсы
 
-- [SOIS — концепция и архитектура служб бортовых интерфейсов](case-studies/sois/README.ru.md) — уровни архитектуры, службы Application Support и Subnetwork, классы QoS, CDAS и TAS. Концептуальный анализ стандарта, не описание реализованной бортовой системы.
+- [SOIS — концепция и архитектура служб бортовых интерфейсов](case-studies/sois/README.ru.md) — уровни архитектуры, службы Application Support и Subnetwork, классы QoS, CDAS и TAS. Анализ реальной архитектуры SOIS по стандартам CCSDS; это не реконструкция конкретной бортовой инсталляции.
 
 
 ## Enterprise / Backend / Integration-heavy documentation
