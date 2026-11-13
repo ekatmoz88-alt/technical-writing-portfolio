@@ -78,7 +78,7 @@ The case study labels unverified technology and relationship assumptions explici
 
 ## Additional architecture case studies
 
-- [SOIS — Spacecraft Onboard Interface Services (RU)](case-studies/sois/README.ru.md) — architecture layers, onboard interface services, subnetwork services, QoS classes, CDAS and TAS. This is a conceptual standards analysis, not an as-built spacecraft system.
+- [SOIS — Spacecraft Onboard Interface Services (RU)](case-studies/sois/README.ru.md) — architecture layers, onboard interface services, subnetwork services, QoS classes, CDAS and TAS. A standards-based analysis of the real CCSDS SOIS architecture; it is not a reconstruction of a specific spacecraft installation.
 
 
 ## Enterprise / Backend / Integration-heavy documentation
