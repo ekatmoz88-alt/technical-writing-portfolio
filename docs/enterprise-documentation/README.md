@@ -16,7 +16,7 @@ This page consolidates public portfolio evidence for documenting complex enterpr
 | Data architecture | Oracle inventory and ER views, 401-table inventory, JSON-to-Oracle mappings and SQLite data-access review | [Territory docs](https://github.com/ekatmoz88-alt/territory-docs), [Deshifrator docs](https://github.com/ekatmoz88-alt/deshifrator-docs) | Strong |
 | UML sequence | Sequence-style interactions can be derived from the documented Orders API authentication and request flow; sequence examples also exist in the MIB3 portfolio material | [Orders API contract](https://github.com/ekatmoz88-alt/api-docs-portfolio-v2/blob/main/openapi/openapi.yaml) | Added demonstration artifact; runtime details require code verification |
 | C4 | The architecture catalogue includes system-landscape and logical-architecture views, but the reviewed sources do not establish a complete, consistently maintained native C4 model across all systems | [Architecture catalogue](https://github.com/ekatmoz88-alt/territory-descriptor-unified) | Standardization gap; a C4 view is added for the Orders API demo |
-| BPMN | Business processes and KYC/operator journeys exist; the reviewed repositories did not show a verified BPMN 2.0 model | [Fintech workflow](https://github.com/ekatmoz88-alt/fintech-docs-demo), [AS FB and DROND source basis](https://github.com/ekatmoz88-alt/technical-writing-portfolio/tree/main/docs/enterprise-documentation) | Added BPMN 2.0 reconstruction from the 2011 automation-object description; not an original source diagram |
+| BPMN | Business processes and KYC/operator journeys are documented; a verified BPMN 2.0 model is not currently presented in this portfolio map | [Fintech workflow](https://github.com/ekatmoz88-alt/fintech-docs-demo) | No standalone BPMN case is promoted |
 | Operational documentation | Developer guides, quickstarts, operational workflows, lifecycle testing and platform requirements | [API docs](https://github.com/ekatmoz88-alt/api-docs-portfolio-v2), [PPO archive](https://github.com/ekatmoz88-alt/ppo-territory-archive) | Present, with varying depth by project |
 
 ## Strongest case studies
@@ -25,11 +25,6 @@ This page consolidates public portfolio evidence for documenting complex enterpr
 2. **API Documentation Portfolio V2** — strongest API-contract and integration example: OpenAPI 3.1, REST, SOAP/WSDL, XML/XSD, request/response models, authentication and validation.
 3. **Territory Docs** — strongest backend/data example: Oracle data model, ER views, API operations, JSON-to-table mappings, validation and rollback notes.
 4. **Deshifrator / ARM Descriptor** — legacy application architecture, source-based component analysis, file exchange, workstation boundaries and technical requirements.
-5. **AS FB and DROND** — separate business-process case based on the 2011 automation-object description: budget planning, imports/exports, approvals, RRO and OBAS.
-
-## AS FB and DROND case study
-
-[Business-process case study](./case-studies/as-fb-drond.md) — a separate description of the domain, source systems, proposal / RRO / OBAS sequence and evidence boundaries.
 
 ## Diagram module
 
@@ -39,7 +34,6 @@ It includes:
 - A C4 Context view for the PPO Territory integration landscape.
 - A C4 Container view for the Orders API portfolio demo.
 - A UML Sequence Diagram for an authenticated API request.
-- A BPMN 2.0 process model for budget planning based on the AS FB and DROND 2011 source.
 - Editable Mermaid source files.
 - Links to existing architecture catalogues and ER diagrams.
 
@@ -47,7 +41,6 @@ It includes:
 
 - The Orders API is a portfolio demo, not a production enterprise service.
 - The C4 and UML Sequence views are documented demonstration models; runtime details must be checked against code and configuration.
-- The AS FB and DROND BPMN model is reconstructed from the supplied 2011 *Detailed Description of the Automation Object*. The referenced original diagrams were not present in the supplied extract. This model is neither an original diagram nor proof of a deployed workflow.
 - PPO Territory, ARM Descriptor and Deshifrator diagrams distinguish documented facts, logical views and unverified dependencies. Do not merge these systems into one runtime architecture.
 - BPMN, UML and C4 are different notations. A Mermaid flowchart is not BPMN; this portfolio stores a separate BPMN 2.0 XML model.
 
