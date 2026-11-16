@@ -1,13 +1,13 @@
 # Enterprise Insurance System — Architecture Case Study
 
-> **Real project documentation.** This architecture document describes a real Enterprise Insurance System project deployed in a server environment. The public model is based on the supplied C4 and ERD materials. Some implementation details remain unresolved in the available documentation: the database engine (Oracle or PostgreSQL), Java/Spring implementation, and Kafka integration require confirmation against the corresponding project artefacts. This does not change the real project status.
+> **Real project documentation.** This case study documents a real Enterprise Insurance System project. The available source materials describe a server-based system and provide C4 and ERD models. The public diagrams preserve the supplied model; they are not an independent verification of the production deployment. The available evidence does not yet confirm the database engine (Oracle or PostgreSQL), the Java/Spring implementation, Kafka usage, or the physical/runtime relationships between the depicted elements. These open verification points concern implementation details, not whether the project itself was real.
 
 ## Scope
 
 This case study documents two complementary views:
 
-- **Container view (C4-inspired):** client/broker, Insurance API, relational database, and Kafka.
-- **Data view (ERD):** CDB and APPLN tables and the relationships supplied in the source model.
+- **Container view (C4-inspired):** the components and connections shown in the supplied C4 model. Their placement is preserved as source material; it does not by itself establish deployment units, infrastructure ownership, or runtime topology.
+- **Data view (ERD):** CDB and APPLN entities, attributes, key markers, and relationships supplied in the source model. No additional relationships are inferred.
 
 ## 1. Container architecture
 
@@ -17,24 +17,26 @@ The source used the C4 `C4Container` notation. For reliable rendering in GitHub 
 flowchart LR
     client["Client / Broker"]
     subgraph system["Enterprise Insurance System"]
-        api["Insurance API<br/>Java / Spring<br/>Application processing"]
-        db[("Oracle / PostgreSQL<br/>Relational database<br/>CDB schema")]
-        kafka[["Kafka<br/>Message broker<br/>Application events"]]
+        api["Insurance API<br/>Java / Spring — unverified<br/>Application processing"]
+        db[("Relational database<br/>Oracle or PostgreSQL — unverified<br/>CDB schema")]
+        kafka[["Message broker<br/>Kafka — unverified<br/>Application events"]]
     end
 
-    client -->|"HTTPS / JSON"| api
-    api -->|"JDBC · Read / Write"| db
-    api -->|"Publish events"| kafka
+    client -->|"HTTPS / JSON — verify"| api
+    api -->|"JDBC · Read / Write — verify"| db
+    api -->|"Publish events — verify"| kafka
 ```
 
 ### Components
 
-| Component | Technology stated in source | Responsibility |
+| Component | Technology / evidence status | Responsibility stated in the model |
 |---|---|---|
 | Client / Broker | External user | Submits and follows up applications |
-| Insurance API | Java / Spring | Application processing and business logic |
-| Relational database | Oracle / PostgreSQL (unverified alternative) | Stores CDB data |
-| Message broker | Kafka | Carries application events |
+| Insurance API | Java / Spring — not independently verified against implementation artefacts | Application processing and business logic |
+| Relational database | Oracle or PostgreSQL — alternatives; actual engine not verified | Stores CDB data |
+| Message broker | Kafka — not independently verified against configuration or runtime artefacts | Carries application events |
+
+The connection labels in the diagram (HTTPS/JSON, JDBC read/write, and event publishing) are retained from the supplied model and require the same implementation-level verification.
 
 ## 2. Database entity-relationship diagram
 
@@ -141,15 +143,17 @@ The following points need confirmation against DDL, ORM mappings, or application
 5. `CDB_INSURANCE` is present in the entity list but has no supplied relationships. No relationships have been invented here.
 6. Oracle and PostgreSQL are presented as alternatives in the source description, not as confirmed simultaneous database platforms.
 
-## 4. Suggested verification sources
+## 4. Verification scope and sources
 
-To complete the technology and relationship details in this real project model, inspect:
+The following checks are intentionally kept separate from the facts transcribed from the supplied diagrams. To verify implementation and deployment details in this real project model, inspect:
 
 - Database DDL and constraint definitions (PK, FK, UNIQUE, NOT NULL).
 - Java entity classes, repositories, and ORM mappings.
 - Spring controllers and service-layer code for request processing.
 - Kafka producer configuration, topic names, event schemas, and retry/error handling.
-- Deployment configuration to establish the actual database engine and runtime topology.
+- Deployment configuration to establish the actual database engine, deployed components, infrastructure ownership, and runtime topology.
+
+Until those artefacts are available, keep the technology names and connection labels marked as unverified. Do not interpret their appearance inside the source system boundary as proof that they are deployed or operated as part of one runtime.
 
 ## 5. Portfolio skills demonstrated
 
@@ -162,4 +166,4 @@ To complete the technology and relationship details in this real project model, 
 
 ## Status
 
-**Draft — real project architecture model with outstanding implementation-level checks.** Diagram syntax is prepared for GitHub Mermaid rendering. The project itself is real; specific technology choices, physical relationships and runtime details remain subject to confirmation against the original implementation.
+**Draft — real project architecture case study based on supplied C4 and ERD materials.** Diagram syntax is prepared for GitHub Mermaid rendering. The project itself is real. The diagrams preserve the supplied source model, while technology choices, connection protocols, physical relationships, deployment ownership, and runtime topology remain unverified until checked against the original implementation artefacts.
