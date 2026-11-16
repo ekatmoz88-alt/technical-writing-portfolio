@@ -2,10 +2,8 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="C4, UML Sequence and BPMN 2.0 diagrams based on public technical documentation portfolio evidence.">
+<meta name="description" content="C4 and UML Sequence diagrams based on public technical documentation portfolio evidence.">
 <title>Enterprise Documentation — Diagram Module</title>
-<link rel="stylesheet" href="https://unpkg.com/bpmn-js@17/dist/assets/diagram-js.css">
-<link rel="stylesheet" href="https://unpkg.com/bpmn-js@17/dist/assets/bpmn-js.css">
 <style>
 :root{color-scheme:light;--ink:#172b4d;--muted:#52657d;--line:#d8e3f0;--blue:#0759c7;--panel:#fff}
 *{box-sizing:border-box}body{margin:0;background:#f5f8fc;color:var(--ink);font:15px/1.6 Inter,"Segoe UI",Arial,sans-serif}
@@ -17,26 +15,25 @@ main{padding:26px 0 55px}.notice{padding:14px 16px;background:#fff8e8;border:1px
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));gap:16px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0;box-shadow:0 6px 20px rgba(22,49,83,.04)}
 .card h2{font-size:18px}.card .desc{font-size:13px}.diagram{overflow:auto;border:1px solid #e4ebf3;border-radius:8px;padding:12px;background:#fff;min-height:220px;margin-top:14px}
-.diagram svg{max-width:100%;height:auto}.bpmn-canvas{height:470px;width:100%;background:#fff;border:1px solid #e4ebf3;border-radius:8px;margin-top:14px}
+.diagram svg{max-width:100%;height:auto}
 .links{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;margin-top:12px}
 .status{font-size:12px;color:#52657d;margin-top:8px}
 footer{border-top:1px solid var(--line);padding:20px 0;color:#65778d;font-size:12px}
-@media(max-width:560px){.wrap{width:min(100% - 24px,1180px)}.card{padding:13px}.bpmn-canvas{height:360px}}
+@media(max-width:560px){.wrap{width:min(100% - 24px,1180px)}.card{padding:13px}}
 </style>
 <script type="module">
 import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
 mermaid.initialize({startOnLoad:true,theme:"neutral",securityLevel:"strict",flowchart:{htmlLabels:false,curve:"basis"}});
 </script>
-<script src="https://unpkg.com/bpmn-js@17/dist/bpmn-navigated-viewer.production.min.js"></script>
 </head>
 <body>
 <header><div class="wrap"><div class="eyebrow">Enterprise documentation · Diagram module</div>
-<h1>C4 · UML · BPMN</h1>
+<h1>C4 · UML</h1>
 <p>Диаграммы строятся из исходников, хранящихся в Git. Для каждого представления указана база и граница доказательности.</p>
 <nav><a href="../index.html">← К обзору enterprise-документации</a><a href="https://github.com/ekatmoz88-alt/technical-writing-portfolio/tree/main/docs/enterprise-documentation/diagrams">Исходники диаграмм ↗</a></nav>
 </div></header>
 <main class="wrap">
-<div class="notice"><strong>Важно:</strong> Orders API — демонстрационный проект портфолио. BPMN-процесс АС ФБ и ДРОНД реконструирован по тексту ДОА 2011 года, а не восстановлен из оригинальной диаграммы или работающей системы. Диаграммы PPO Territory / ARM Descriptor / Deshifrator доступны в отдельном каталоге и не объединяются в общую runtime-систему.</div>
+<div class="notice"><strong>Важно:</strong> Orders API — демонстрационный проект портфолио. Диаграммы PPO Territory / ARM Descriptor / Deshifrator доступны в отдельном каталоге и не объединяются в общую runtime-систему.</div>
 <div class="grid">
 <section class="card" id="ppo-c4"><div class="eyebrow">01 · C4 Context</div><h2>PPO Territory — integration landscape</h2><p class="desc">System context view based on seven external exchange directions listed in the PPO Territory archive. It does not assert current endpoints or protocol details.</p><div class="diagram mermaid">
 C4Context
@@ -89,23 +86,9 @@ sequenceDiagram
  DB-->>Edge: Created order
  Edge-->>User: 201 Created + JSON
 </div><div class="links"><a href="../../docs/enterprise-documentation/diagrams/orders-api-sequence.mmd">Mermaid source ↗</a><a href="https://github.com/ekatmoz88-alt/api-docs-portfolio-v2/blob/main/README.ru.md">Project description ↗</a></div></section>
-<section class="card" id="bpmn"><div class="eyebrow">03 · BPMN 2.0</div><h2>АС ФБ и ДРОНД — budget planning</h2><p class="desc">Reconstructed process with review and approval activities, based on Section 7 of the 2011 automation-object description.</p><div id="bpmn-canvas" class="bpmn-canvas"></div><div id="bpmn-status" class="status">Загрузка BPMN 2.0 модели…</div><div class="links"><a href="../../docs/enterprise-documentation/diagrams/as-fb-drond-budget-planning.bpmn">BPMN 2.0 XML ↗</a><a href="../../docs/enterprise-documentation/diagrams/as-fb-drond-budget-planning.mmd">Process overview ↗</a></div></section>
 <section class="card"><div class="eyebrow">04 · Existing architecture catalogue</div><h2>System architecture and components</h2><p class="desc">The existing portfolio includes 10 primary Mermaid architecture diagrams and 7 additional component maps, with documented/derived/unverified distinctions.</p><div class="links"><a href="https://ekatmoz88-alt.github.io/territory-descriptor-unified/materials/architecture/architecture.html">Interactive architecture catalogue ↗</a><a href="https://github.com/ekatmoz88-alt/territory-descriptor-unified/blob/main/materials/architecture/component-maps.md">7 detailed component maps ↗</a><a href="https://github.com/ekatmoz88-alt/territory-docs/tree/main/database">Oracle data models and ER views ↗</a><a href="https://github.com/ekatmoz88-alt/cobalt-ui-navigation-docs/blob/main/diagrams/architecture.mmd">C++ component diagram ↗</a></div></section>
 </div>
 </main>
-<footer><div class="wrap">Enterprise Documentation · C4 / UML / BPMN · Source files are versioned in Git</div></footer>
-<script>
-(async()=>{
- const status=document.getElementById("bpmn-status");
- try{
-  if(!window.BpmnJS) throw new Error("BPMN viewer library did not load");
-  const viewer=new BpmnJS({container:"#bpmn-canvas"});
-  const response=await fetch("../../docs/enterprise-documentation/diagrams/as-fb-drond-budget-planning.bpmn");
-  if(!response.ok) throw new Error("BPMN XML could not be loaded ("+response.status+")");
-  await viewer.importXML(await response.text());
-  viewer.get("canvas").zoom("fit-viewport");
-  status.textContent="BPMN 2.0 model loaded. Use the mouse wheel to zoom and drag to pan.";
- }catch(error){status.textContent="BPMN preview unavailable: "+error.message+" — use the BPMN 2.0 XML source link.";console.error(error);}
-})();
-</script>
+<footer><div class="wrap">Enterprise Documentation · C4 / UML · Source files are versioned in Git</div></footer>
+
 </body></html>
