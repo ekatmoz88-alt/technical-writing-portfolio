@@ -6,6 +6,7 @@ on:
       - "site/**"
       - "docs/**"
       - "openapi/**"
+      - "case-studies/**"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 permissions:
@@ -27,11 +28,12 @@ jobs:
       - uses: actions/configure-pages@v6
       - name: Prepare website
         run: |
-          mkdir -p _site/docs _site/openapi
+          mkdir -p _site/docs _site/openapi _site/case-studies
           cp site/index.html _site/index.html
           cp -R site/enterprise-documentation _site/enterprise-documentation
           cp -R docs/. _site/docs/
           cp -R openapi/. _site/openapi/
+          cp -R case-studies/. _site/case-studies/
       - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
