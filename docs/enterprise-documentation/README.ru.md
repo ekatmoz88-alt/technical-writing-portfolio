@@ -16,7 +16,7 @@
 | Data architecture | Oracle inventory and ER views, 401-table inventory, JSON-to-Oracle mappings, SQLite data-access review | [Territory docs](https://github.com/ekatmoz88-alt/territory-docs), [Deshifrator docs](https://github.com/ekatmoz88-alt/deshifrator-docs) | Сильная сторона |
 | UML sequence | A sequence-style interaction model can be derived from the documented Orders API authentication and request flow; existing sequence examples also occur in the MIB3 portfolio material | [Orders API contract](https://github.com/ekatmoz88-alt/api-docs-portfolio-v2/blob/main/openapi/openapi.yaml) | Добавлен демонстрационный артефакт; требует сверки с runtime-кодом |
 | C4 | Existing architecture catalogue contains system landscape and logical architecture views, but the reviewed sources do not establish a complete, consistently maintained native C4 model across all systems | [Architecture catalogue](https://github.com/ekatmoz88-alt/territory-descriptor-unified) | Требовалась стандартизация; добавлен C4 view для Orders API demo |
-| BPMN | Business processes and KYC/operator journeys are documented; reviewed repositories did not show a verified BPMN 2.0 model | [Fintech workflow](https://github.com/ekatmoz88-alt/fintech-docs-demo), [AS FB and DROND source basis](https://github.com/ekatmoz88-alt/technical-writing-portfolio/tree/main/docs/enterprise-documentation) | Добавлена BPMN 2.0 реконструкция по ДОА 2011; не является исходной схемой |
+| BPMN | Описания бизнес-процессов и KYC/operator journeys | [Fintech workflow](https://github.com/ekatmoz88-alt/fintech-docs-demo) | Отдельный BPMN-кейс в портфолио не представлен |
 | Operational documentation | Developer guides, quickstarts, operational workflows, lifecycle testing, platform requirements | [API docs](https://github.com/ekatmoz88-alt/api-docs-portfolio-v2), [PPO archive](https://github.com/ekatmoz88-alt/ppo-territory-archive) | Есть, но неодинаково глубоко по проектам |
 
 ## Рекомендуемые кейсы для работодателя
@@ -25,11 +25,6 @@
 2. **API Documentation Portfolio V2** — лучший пример API contracts и integration documentation: OpenAPI 3.1, REST, SOAP/WSDL, XML/XSD, request/response models, auth and validation.
 3. **Territory Docs** — лучший пример backend/data documentation: Oracle data model, ER views, API operations, JSON-to-table mappings, validation and rollback notes.
 4. **Deshifrator / ARM Descriptor** — примеры legacy application architecture, source-based component analysis, file exchange, workstation boundaries and technical requirements.
-5. **АС ФБ и ДРОНД** — отдельный бизнес-процессный кейс на основе ДОА 2011 года: бюджетное планирование, импорты/экспорты, согласования, РРО и ОБАС.
-
-## Кейс АС ФБ и ДРОНД
-
-[Бизнес-процессный кейс](./case-studies/as-fb-drond.md) — отдельное описание предметной области, источников, последовательности предложений / РРО / ОБАС и границ доказательности.
 
 ## Диаграммный модуль
 
@@ -39,7 +34,6 @@
 - C4 Context для интеграционного ландшафта ППО «Территория».
 - C4 Container view для демонстрационного Orders API.
 - UML Sequence Diagram для аутентифицированного API-вызова.
-- BPMN 2.0 process model для процесса формирования бюджета по ДОА АС ФБ и ДРОНД.
 - Mermaid source для воспроизводимого редактирования.
 - Ссылки на существующие архитектурные каталоги и ER-диаграммы.
 
@@ -47,7 +41,6 @@
 
 - Демонстрационный Orders API не следует выдавать за production enterprise-сервис.
 - C4 и UML Sequence для Orders API — документированные демонстрационные представления, но конкретные детали runtime должны сверяться с кодом и конфигурацией.
-- BPMN для АС ФБ и ДРОНД реконструирована по тексту «Детального описания объекта автоматизации» 2011 года. В исходном фрагменте диаграммы отсутствовали; модель не выдаётся за оригинал или подтверждённый workflow внедрённой системы.
 - Диаграммы PPO Territory / ARM Descriptor / Deshifrator различают подтверждённые сведения, логические представления и непроверенные зависимости. Не объединять системы в одну runtime-архитектуру.
 - BPMN, UML и C4 — разные нотации. Mermaid flowchart не следует называть BPMN; для BPMN здесь хранится отдельный файл BPMN 2.0 XML.
 
