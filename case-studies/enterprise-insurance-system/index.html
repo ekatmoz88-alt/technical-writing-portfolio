@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Enterprise Insurance System architecture case study: C4-inspired container view, ERD, and evidence status.">
+  <title>Enterprise Insurance System — Architecture Case Study</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5/github-markdown.min.css">
+  <style>
+    :root{color-scheme:light}
+    body{margin:0;background:#f6f8fa;color:#1f2328;font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+    main{max-width:1120px;margin:0 auto;padding:40px 24px}
+    article{background:#fff;border:1px solid #d1d9e0;border-radius:12px;padding:32px;box-shadow:0 4px 18px rgba(31,35,40,.05)}
+    .top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+    .top a{color:#0969da}
+    .markdown-body{font-size:16px}
+    .markdown-body pre{overflow:auto}
+    .mermaid{background:#fff;padding:12px;text-align:center;overflow-x:auto}
+    .status{color:#57606a;font-size:.9rem}
+    @media(max-width:640px){main{padding:16px 10px}article{padding:18px}}
+  </style>
+</head>
+<body>
+<main>
+  <div class="top">
+    <a href="../../">← Portfolio home</a>
+    <a href="https://github.com/ekatmoz88-alt/technical-writing-portfolio/blob/main/case-studies/enterprise-insurance-system/README.md">View source on GitHub ↗</a>
+  </div>
+  <article class="markdown-body" id="content">
+    <h1>Enterprise Insurance System — Architecture Case Study</h1>
+    <p class="status">Loading the case study…</p>
+  </article>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/markdown-it@14/dist/markdown-it.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+(async()=>{
+  const target=document.getElementById("content");
+  try{
+    const response=await fetch("./README.md");
+    if(!response.ok) throw new Error("Could not load README.md ("+response.status+")");
+    const markdown=await response.text();
+    const md=window.markdownit({html:false,linkify:true,typographer:true,breaks:false});
+    const defaultFence=md.renderer.rules.fence || ((tokens,idx,options,env,self)=>self.renderToken(tokens,idx,options));
+    md.renderer.rules.fence=(tokens,idx,options,env,self)=>{
+      const token=tokens[idx];
+      if(token.info.trim().split(/\s+/)[0]==="mermaid")
+        return '<pre class="mermaid">'+md.utils.escapeHtml(token.content)+'</pre>';
+      return defaultFence(tokens,idx,options,env,self);
+    };
+    target.innerHTML=md.render(markdown);
+    mermaid.initialize({startOnLoad:false,securityLevel:"strict",theme:"neutral"});
+    await mermaid.run({querySelector:".mermaid"});
+  }catch(error){
+    target.innerHTML='<h1>Case study unavailable</h1><p>'+String(error.message).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))+'</p><p><a href="https://github.com/ekatmoz88-alt/technical-writing-portfolio/blob/main/case-studies/enterprise-insurance-system/README.md">Open the source Markdown on GitHub</a></p>';
+  }
+})();
+</script>
+</body>
+</html>
