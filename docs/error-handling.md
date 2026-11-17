@@ -1,5 +1,8 @@
 # Error Handling
 
+> **Scope:** The error model and examples below belong to this repository's sample Orders API contract. They are illustrative and should not be treated as the error behavior of the deployed Supabase Orders API in API Documentation Portfolio V2.
+
+
 Every error in this API has the same shape. A client can rely on one parser and one handling path regardless of which endpoint failed.
 
 ## Error format
