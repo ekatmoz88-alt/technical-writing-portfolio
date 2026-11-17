@@ -1,5 +1,8 @@
 # Developer Guide
 
+> **Scope:** This guide demonstrates an integration workflow for the sample Orders API contract in this repository. The example base URLs and credentials flow are placeholders, not connection details for a live service.
+
+
 Get from zero to your first successful API call in about five minutes.
 
 1. [Get credentials](#1-get-credentials)

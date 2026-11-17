@@ -1,5 +1,8 @@
 # API Reference
 
+> **Scope:** This reference documents the independent sample Orders API contract in this repository. The server URLs and response payloads are illustrative; they do not describe the deployed Supabase Orders API in API Documentation Portfolio V2.
+
+
 Extracted from [`openapi/openapi.yaml`](../openapi/openapi.yaml) — the specification is the source of truth.
 
 Every endpoint follows the same layout, so a developer knows where to look regardless of which endpoint they open:
@@ -8,7 +11,7 @@ Every endpoint follows the same layout, so a developer knows where to look regar
 2. **Request** — method, path, parameters table.
 3. **Response** — schema table with types and nullability.
 4. **Errors** — status codes this endpoint can return, mapped to the shared [error model](error-handling.md).
-5. **Example** — copy-paste request and a real response body.
+5. **Example** — copy-paste request and an illustrative response body.
 
 ---
 

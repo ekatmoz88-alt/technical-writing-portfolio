@@ -1,5 +1,8 @@
 # Webhooks
 
+> **Scope:** The events, payloads, signature format, retry schedule, and subscription steps below are part of the sample Orders API contract in this repository. They are illustrative and are not claims about the deployed Supabase Orders API in API Documentation Portfolio V2.
+
+
 Webhooks push order events to your endpoint instead of making you poll. They are declared in [`openapi/openapi.yaml`](../openapi/openapi.yaml) under the root `webhooks` field — the same specification that generates the API reference.
 
 ## Events
